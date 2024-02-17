@@ -11,7 +11,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 script {
-                        sh 'python3 regex_practice.py'
+                        sh 'python3 Sentence_Reverse.py'
                        }
                 }
             }

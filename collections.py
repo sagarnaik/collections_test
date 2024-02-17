@@ -1,8 +1,9 @@
 # Counter
 import collections
 #collections.cnt
-cnt = collections.
+#cnt = collections
 for word in ['red', 'blue', 'red', 'green', 'blue', 'blue']:
-    cnt[word] += 1
+    #cnt[word] += 1
+    pass
 
-print cnt
+#print cnt

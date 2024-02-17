@@ -10,41 +10,57 @@ class TestCalculator(unittest.TestCase):
     def test_addition(self):
         result = self.calculator.add(3, 4)
         self.assertEqual(result, 7)
+        print(f'result is {result}')
+        print('TC Passed')
 
     # Test Case 2: Subtraction
     def test_subtraction(self):
         result = self.calculator.subtract(8, 5)
         self.assertEqual(result, 3)
+        print(f'result is {result}')
+        print('TC Passed')
 
     # Test Case 3: Multiplication
     def test_multiplication(self):
         result = self.calculator.multiply(2, 6)
         self.assertEqual(result, 12)
+        print(f'result is {result}')
+        print('TC Passed')
 
     # Test Case 4: Division
     def test_division(self):
         result = self.calculator.divide(10, 2)
         self.assertEqual(result, 5)
+        print(f'result is {result}')
+        print('TC Passed')
 
     # Test Case 5: Division by zero should raise an exception
     def test_division_by_zero(self):
         with self.assertRaises(ValueError):
             self.calculator.divide(5, 0)
+            print(f'result is {result}')
+            print('TC Passed')
 
     # Test Case 6: Exponentiation
     def test_exponentiation(self):
         result = self.calculator.power(2, 3)
         self.assertEqual(result, 8)
+        print(f'result is {result}')
+        print('TC Passed')
 
     # Test Case 7: Square root
     def test_square_root(self):
         result = self.calculator.sqrt(9)
         self.assertEqual(result, 3)
+        print(f'result is {result}')
+        print('TC Passed')
 
     # Test Case 8: Absolute value
     def test_absolute_value(self):
         result = self.calculator.abs_value(-5)
         self.assertEqual(result, 5)
+        print(f'result is {result}')
+        print('TC Passed')
 
     # Test Case 9: Check if the calculator instance is created
     def test_calculator_instance(self):

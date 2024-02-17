@@ -10,7 +10,11 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh 'sudo python3 /home/ad.msystechnologies.com/sagar.naik/Downloads/m3/test1.py'
+                steps {
+                    script {
+                        sh 'sudo python3 regex_practice.py'
+                        }
+                }
             }
         }
         stage('Deploy') {

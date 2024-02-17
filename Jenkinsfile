@@ -11,7 +11,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 script {
-                        sh 'sudo python3 /home/ad.msystechnologies.com/sagar.naik/Downloads/m3/test1.py'
+                        sh 'sudo python3 regex_practice.py'
                        }
                 }
             }

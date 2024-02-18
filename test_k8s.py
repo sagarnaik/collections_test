@@ -1,6 +1,6 @@
 import subprocess
 import pytest
-from K8s import K8s
+from k8s import K8s
 
 # Fixture for the K8s instance
 @pytest.fixture

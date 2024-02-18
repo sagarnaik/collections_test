@@ -2,7 +2,7 @@ import subprocess
 class K8s:
     def get_namespaces(self):
         try: 
-            subprocess.check_output(["KUBECONFIG=$HOME/.kube/config"], text=True)
+            subprocess.check_output(["KUBECONFIG=$HOME/.kube/config"], shell=True, text=True)
             res = subprocess.check_output(["kubectl", "get", "namespaces"], text=True) 
             print(res)
             return res
@@ -11,7 +11,7 @@ class K8s:
 
     def get_nodes(self):
         try:
-            subprocess.check_output(["KUBECONFIG=$HOME/.kube/config"], text=True)
+            subprocess.check_output(["KUBECONFIG=$HOME/.kube/config"], shell=True, text=True)
             res = subprocess.check_output(["kubectl", "get", "nodes"], text=True) 
             print(res)
             return res
@@ -20,7 +20,7 @@ class K8s:
 
     def get_pods(self):
         try:
-            subprocess.check_output(["KUBECONFIG=$HOME/.kube/config"], text=True)
+            subprocess.check_output(["KUBECONFIG=$HOME/.kube/config"], shell=True, text=True)
             res = subprocess.check_output(["kubectl", "get", "pods"], text=True) 
             print(res)
             return res

@@ -13,7 +13,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 script {
-                        println 'Test suite name is ${testname}'
+                        println testname
                         println a, b, c
                         sh 'python3 test_calc.py'
                        }

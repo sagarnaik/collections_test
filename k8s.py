@@ -1,22 +1,28 @@
 import subprocess
 class K8s:
     def get_namespaces(self):
-        res = subprocess.run(["kubectl get namespaces"], shell=True, capture_output=True, text=True)
-        #res = subprocess.check_output('sudo kubectl get namespaces', shell=False)
-        print(res.stdout)
-        return res.stdout
+        try: 
+            res = subprocess.check_output(["kubectl", "get", "namespaces"], text=True) 
+            print(res)
+            return res
+        except subprocess.CalledProcessError as e: 
+            print(f"Command failed with return code {e.returncode}")
 
     def get_nodes(self):
-        res = subprocess.run(["kubectl get nodes"], shell=True, capture_output=True, text=True)
-        #res = subprocess.check_output('sudo kubectl get nodes', shell=False)
-        print(res.stdout)
-        return res.stdout
+        try: 
+            res = subprocess.check_output(["kubectl", "get", "nodes"], text=True) 
+            print(res)
+            return res
+        except subprocess.CalledProcessError as e: 
+            print(f"Command failed with return code {e.returncode}")
 
     def get_pods(self):
-        res = subprocess.run(["kubectl get pods"], shell=True, capture_output=True, text=True)
-        #res = subprocess.check_output('sudo kubectl get pods', shell=False)
-        print(res.stdout)
-        return res.stdout
+        try: 
+            res = subprocess.check_output(["kubectl", "get", "pods"], text=True) 
+            print(res)
+            return res
+        except subprocess.CalledProcessError as e: 
+            print(f"Command failed with return code {e.returncode}")
 
 k = K8s()
 k.get_namespaces()

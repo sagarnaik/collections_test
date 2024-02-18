@@ -14,7 +14,6 @@ pipeline {
                 echo 'Testing..'
                 script {
                         println testname
-                        println a, b, c
                         sh 'python3 test_calc.py'
                        }
                 }

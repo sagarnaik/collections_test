@@ -1,4 +1,4 @@
-uname = $UserName
+uname = UserName
 def testname = 'Calculator Program Test Cases'
 def (a, b, c) = [20, 30, 40]
 pipeline {

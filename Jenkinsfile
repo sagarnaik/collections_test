@@ -27,7 +27,7 @@ pipeline {
                         sh 'python3 test_calc.py'
                     } else {
                         println testname
-                        sh 'python3 k8s.py'
+                        sh 'pytest test_k8s.py'
                     }
                         
                     }

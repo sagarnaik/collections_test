@@ -22,9 +22,15 @@ pipeline {
             steps {
                 echo 'Testing..'
                 script {
+                    if (testname == 'Calculator Program Test Cases'){
                         println testname
                         sh 'python3 test_calc.py'
-                       }
+                    } else {
+                        println testname
+                        sh 'pytest test_k8s.py'
+                    }
+                        
+                    }
                 }
             }
         stage('Deploy') {

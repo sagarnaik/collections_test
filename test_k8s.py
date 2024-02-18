@@ -16,7 +16,7 @@ def test_get_nodes(k8s_instance):
     print (k8s_instance.get_nodes())
     assert 'minikube' in k8s_instance.get_nodes()
 
-def test_get_pods(mock_check_output, k8s_instance):
+def test_get_pods(k8s_instance):
     print (k8s_instance.get_pods())
     assert 'ImagePullBackOff' in k8s_instance.get_pods()
 

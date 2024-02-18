@@ -11,3 +11,8 @@ class K8s:
     def get_pods(self):
         res = subprocess.check_output('kubectl get pods', shell=True)
         return res
+
+k = K8s()
+print(k.get_namespaces())
+print(k.get_nodes())
+print(k.get_pods())

@@ -1,5 +1,5 @@
 uname = UserName
-def testname = 'Calculator Program Test Cases'
+testname = TestName
 def (a, b, c) = [20, 30, 40]
 pipeline {
     agent any
@@ -9,7 +9,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 script {
-                    if (testname == 'Calculator Program Test Cases'){
+                    if (testname == 'Calculator'){
                         echo uname
                         echo "Tested if"
                     } else {
@@ -22,7 +22,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 script {
-                    if (testname == 'Calculator Program Test Cases'){
+                    if (testname == 'Calculator'){
                         println testname
                         sh 'python3 test_calc.py'
                     } else {

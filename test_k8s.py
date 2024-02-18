@@ -10,11 +10,11 @@ def k8s_instance():
 
 def test_get_namespaces(k8s_instance):
     print (k8s_instance.get_namespaces())
-    assert 'kube-system' in k8s_instance.get_namespaces()
+    assert 'Ubuntu' in k8s_instance.get_namespaces()
 
 def test_get_nodes(k8s_instance):
     print (k8s_instance.get_nodes())
-    assert 'minikube' in k8s_instance.get_nodes()
+    assert 'Filesystem' in k8s_instance.get_nodes()
 
 def test_get_pods(k8s_instance):
     print (k8s_instance.get_pods())

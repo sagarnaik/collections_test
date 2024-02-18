@@ -1,3 +1,5 @@
+def testname = 'Calculator Program Test Cases'
+def a =20
 pipeline {
     agent any
 
@@ -11,6 +13,8 @@ pipeline {
             steps {
                 echo 'Testing..'
                 script {
+                        println testname
+                        println a
                         sh 'python3 test_calc.py'
                        }
                 }

@@ -7,10 +7,12 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                if (testname == 'Calculator Program Test Cases'){
-                                    echo "Tested if"
-                } else {
-                    echo 'Inside else block'
+                script {
+                    if (testname == 'Calculator Program Test Cases'){
+                        echo "Tested if"
+                    } else {
+                        echo 'Inside else block'
+                    }
                 }
             }
         }

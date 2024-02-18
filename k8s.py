@@ -1,17 +1,17 @@
 import subprocess
 class K8s:
     def get_namespaces(self):
-        res = subprocess.check_output('sudo kubectl get namespaces', shell=True)
+        res = subprocess.check_output('sudo kubectl get namespaces', shell=False)
         print(res)
         return res
 
     def get_nodes(self):
-        res = subprocess.check_output('sudo kubectl get nodes', shell=True)
+        res = subprocess.check_output('sudo kubectl get nodes', shell=False)
         print(res)
         return res
 
     def get_pods(self):
-        res = subprocess.check_output('sudo kubectl get pods', shell=True)
+        res = subprocess.check_output('sudo kubectl get pods', shell=False)
         print(res)
         return res
 

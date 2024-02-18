@@ -21,7 +21,7 @@ class K8s:
     def get_pods(self):
         try:
             #subprocess.check_output(["KUBECONFIG=$HOME/.kube/config"], shetext=True)
-            res = subprocess.check_output(["python", "--version"], text=True) 
+            res = subprocess.check_output(["python3", "--version"], text=True) 
             print(res)
             return res
         except subprocess.CalledProcessError as e: 

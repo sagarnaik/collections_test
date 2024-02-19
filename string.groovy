@@ -30,3 +30,13 @@ def while_check()
          println(i);
     }
 }
+
+def if_check(count=3)
+{
+    if (count < 5) {
+        println("less than 5");
+    }
+    else if (count > 5){
+        println("greater than 5");
+    }
+}

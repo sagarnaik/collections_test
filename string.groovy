@@ -40,3 +40,4 @@ def if_check(count=3)
         println("greater than 5");
     }
 }
+return this

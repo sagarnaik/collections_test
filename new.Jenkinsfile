@@ -17,6 +17,13 @@ pipeline {
                     def ls = sh 'ls'
                     println ls
                     gapi = load "string.groovy"
+                    files = gapi.get_test_files()
+                    wch = gapi.while_check()
+                    cnt = gapi.if_check()
+                    println files
+                    println wch
+                    println cnt
+                    
                     }
                 }
             }

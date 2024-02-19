@@ -16,6 +16,9 @@ def get_test_files()
             test_files << test_name
         }
     }
+    for (int i = 0; i < 20; i++) {
+        sh "echo Hello"
+    }
     return test_files
 }
 

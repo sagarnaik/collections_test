@@ -1,4 +1,3 @@
-count = Count
 pipeline {
     agent any
 

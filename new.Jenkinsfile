@@ -16,6 +16,7 @@ pipeline {
                 script {
                     def ls = sh 'ls'
                     println ls
+                    gapi = load "string.groovy"
                     }
                 }
             }

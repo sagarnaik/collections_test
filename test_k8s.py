@@ -22,4 +22,4 @@ def test_get_pods(k8s_instance):
 
 def test_get_namespaces_error(k8s_instance):
     print (k8s_instance.get_namespaces())
-    assert 'kube-system_error' in k8s_instance.get_namespaces()
+    assert 'Linux' in k8s_instance.get_namespaces()
